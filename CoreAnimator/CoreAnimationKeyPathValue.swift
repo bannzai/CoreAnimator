@@ -16,7 +16,7 @@ public protocol ValueType {
     static var key: String { get }
 }
 
-public struct KeyPathValue {
+public struct KeyPathValueType {
     
     public struct cornerRadius: ValueType {
         public static let key: String = "cornerRadius"
@@ -35,8 +35,8 @@ public struct KeyPathValue {
     public struct frame: ValueType {
         public static let key: String = "frame"
         
-        public func translate(input: CGFloat) -> NSNumber {
-            return NSNumber(value: Float(input))
+        public func translate(input: CGRect) -> NSValue {
+            return NSValue(cgRect: input)
         }
         
         public struct origin: ValueType {

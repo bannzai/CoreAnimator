@@ -60,7 +60,7 @@ public class SequenceAnimator {
         options: CoreAnimationTimingType,
         keyPath: V.Type,
         fromValue: V.Input,
-        toValue: V.Output,
+        toValue: V.Input,
         autoreverse: Bool = false,
         isRemovedOnCompletion: Bool = false,
         fillMode: CoreAnimationFillMode = .forwards,
