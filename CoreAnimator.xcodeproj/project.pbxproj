@@ -10,8 +10,11 @@
 		BA906F0D1F47DA9C005EECD3 /* CoreAnimator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA906F031F47DA9C005EECD3 /* CoreAnimator.framework */; };
 		BA906F121F47DA9C005EECD3 /* CoreAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F111F47DA9C005EECD3 /* CoreAnimatorTests.swift */; };
 		BA906F141F47DA9C005EECD3 /* CoreAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = BA906F061F47DA9C005EECD3 /* CoreAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA906F1E1F47DAA7005EECD3 /* CoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */; };
-		BA906F5C1F47E65A005EECD3 /* AnimationKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */; };
+		BA906F1E1F47DAA7005EECD3 /* SequenceAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F1D1F47DAA7005EECD3 /* SequenceAnimator.swift */; };
+		BA906F5C1F47E65A005EECD3 /* CoreAnimationFillMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F5B1F47E65A005EECD3 /* CoreAnimationFillMode.swift */; };
+		BAF514D51F4826F7009F0CE6 /* SequenceAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF514D41F4826F7009F0CE6 /* SequenceAnimation.swift */; };
+		BAF514D71F482733009F0CE6 /* CoreAnimationTimingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF514D61F482733009F0CE6 /* CoreAnimationTimingType.swift */; };
+		BAF514D91F482758009F0CE6 /* CoreAnimationKeyPathValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF514D81F482758009F0CE6 /* CoreAnimationKeyPathValue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,8 +34,11 @@
 		BA906F0C1F47DA9C005EECD3 /* CoreAnimatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreAnimatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA906F111F47DA9C005EECD3 /* CoreAnimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimatorTests.swift; sourceTree = "<group>"; };
 		BA906F131F47DA9C005EECD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimator.swift; sourceTree = "<group>"; };
-		BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationKeyPath.swift; sourceTree = "<group>"; };
+		BA906F1D1F47DAA7005EECD3 /* SequenceAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceAnimator.swift; sourceTree = "<group>"; };
+		BA906F5B1F47E65A005EECD3 /* CoreAnimationFillMode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationFillMode.swift; sourceTree = "<group>"; };
+		BAF514D41F4826F7009F0CE6 /* SequenceAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceAnimation.swift; sourceTree = "<group>"; };
+		BAF514D61F482733009F0CE6 /* CoreAnimationTimingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationTimingType.swift; sourceTree = "<group>"; };
+		BAF514D81F482758009F0CE6 /* CoreAnimationKeyPathValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationKeyPathValue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				BA906F061F47DA9C005EECD3 /* CoreAnimator.h */,
-				BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */,
-				BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */,
+				BAF514DA1F482761009F0CE6 /* CoreAnimationModel */,
+				BAF514D31F4826DF009F0CE6 /* Sequence */,
 				BA906F071F47DA9C005EECD3 /* Info.plist */,
 			);
 			path = CoreAnimator;
@@ -90,6 +96,25 @@
 				BA906F131F47DA9C005EECD3 /* Info.plist */,
 			);
 			path = CoreAnimatorTests;
+			sourceTree = "<group>";
+		};
+		BAF514D31F4826DF009F0CE6 /* Sequence */ = {
+			isa = PBXGroup;
+			children = (
+				BA906F1D1F47DAA7005EECD3 /* SequenceAnimator.swift */,
+				BAF514D41F4826F7009F0CE6 /* SequenceAnimation.swift */,
+			);
+			name = Sequence;
+			sourceTree = "<group>";
+		};
+		BAF514DA1F482761009F0CE6 /* CoreAnimationModel */ = {
+			isa = PBXGroup;
+			children = (
+				BA906F5B1F47E65A005EECD3 /* CoreAnimationFillMode.swift */,
+				BAF514D81F482758009F0CE6 /* CoreAnimationKeyPathValue.swift */,
+				BAF514D61F482733009F0CE6 /* CoreAnimationTimingType.swift */,
+			);
+			name = CoreAnimationModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA906F1E1F47DAA7005EECD3 /* CoreAnimator.swift in Sources */,
-				BA906F5C1F47E65A005EECD3 /* AnimationKeyPath.swift in Sources */,
+				BA906F1E1F47DAA7005EECD3 /* SequenceAnimator.swift in Sources */,
+				BAF514D91F482758009F0CE6 /* CoreAnimationKeyPathValue.swift in Sources */,
+				BAF514D51F4826F7009F0CE6 /* SequenceAnimation.swift in Sources */,
+				BA906F5C1F47E65A005EECD3 /* CoreAnimationFillMode.swift in Sources */,
+				BAF514D71F482733009F0CE6 /* CoreAnimationTimingType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

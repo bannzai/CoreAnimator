@@ -1,68 +1,13 @@
 //
-//  AnimationKeyPath.swift
+//  CoreAnimationKeyPathValue.swift
 //  CoreAnimator
 //
 //  Created by Yudai.Hirose on 2017/08/19.
 //  Copyright © 2017年 廣瀬雄大. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-
-public protocol Animatable: class {
-    
-}
-
-extension UIView: Animatable {
-
-}
-
-extension CALayer: Animatable {
-    
-}
-
-public enum CoreAnimationFillMode: Int {
-    case forwards
-    case backwards
-    case both
-    case removed
-
-    var key: String {
-        switch self {
-        case .forwards:
-            return kCAFillModeForwards
-        case .backwards:
-            return kCAFillModeBackwards
-        case .both:
-            return kCAFillModeBoth
-        case .removed:
-            return kCAFillModeRemoved
-        }
-    }
-}
-
-public enum CoreAnimationTimingType: Int {
-    case linear
-    case easeIn
-    case easeOut
-    case easeInOut 
-    case `default`
-    
-    var key: String {
-        switch self {
-        case .linear:
-            return kCAMediaTimingFunctionLinear
-        case .easeIn:
-            return kCAMediaTimingFunctionEaseIn
-        case .easeOut:
-            return kCAMediaTimingFunctionEaseOut
-        case .easeInOut:
-            return kCAMediaTimingFunctionEaseInEaseOut
-        case .`default`:
-            return kCAMediaTimingFunctionDefault
-        }
-    }
-}
 
 public protocol ValueType {
     associatedtype Input
@@ -117,16 +62,3 @@ public struct KeyPathValue {
         }
     }
 }
-
-//public struct CoreAnimationOptions: OptionSet {
-//    public let rawValue: CoreAnimationTimingType
-//    public init(rawValue: CoreAnimationTimingType) {
-//       self.rawValue = rawValue
-//    }
-//    
-//    static let linear = CoreAnimationOptions(rawValue: .linear)
-//    static let easeIn = CoreAnimationOptions(rawValue: .easeIn)
-//    static let easeOut = CoreAnimationOptions(rawValue: .easeOut)
-//    static let easeInOut = CoreAnimationOptions(rawValue: .easeInOut)
-//    static let `default` = CoreAnimationOptions(rawValue: .default)
-//}
