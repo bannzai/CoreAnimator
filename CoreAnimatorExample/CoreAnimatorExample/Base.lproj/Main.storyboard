@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreAnimatorExample" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-Be-mf9">
+                                <rect key="frame" x="67" y="276" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.3225064762" green="0.51771366699999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pFx-gx-A4a">
+                                <rect key="frame" x="67" y="420" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.69884383179999998" blue="0.1861154156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wxa-er-AcE">
+                                <rect key="frame" x="67" y="127" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.33069035299999999" blue="0.089337651089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Wxa-er-AcE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="0An-VK-eK4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pFx-gx-A4a" secondAttribute="bottom" constant="119" id="2P2-W2-Ghk"/>
+                            <constraint firstItem="pFx-gx-A4a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4a0-ZI-u2z"/>
+                            <constraint firstItem="Wxa-er-AcE" firstAttribute="leading" secondItem="5uF-Be-mf9" secondAttribute="leading" id="CYs-rv-xX7"/>
+                            <constraint firstItem="Wxa-er-AcE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EjC-Bx-20D"/>
+                            <constraint firstItem="pFx-gx-A4a" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="420" id="JgD-QB-lI2"/>
+                            <constraint firstItem="5uF-Be-mf9" firstAttribute="leading" secondItem="pFx-gx-A4a" secondAttribute="leading" id="U4p-Gr-4Ys"/>
+                            <constraint firstItem="pFx-gx-A4a" firstAttribute="top" secondItem="5uF-Be-mf9" secondAttribute="bottom" constant="16" id="bY6-An-MNo"/>
+                            <constraint firstItem="Wxa-er-AcE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="gnh-2N-odF"/>
+                            <constraint firstItem="5uF-Be-mf9" firstAttribute="top" secondItem="Wxa-er-AcE" secondAttribute="bottom" constant="21" id="oof-UF-pbd"/>
+                            <constraint firstItem="5uF-Be-mf9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qk0-ev-d8l"/>
+                            <constraint firstItem="5uF-Be-mf9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="276" id="tcE-jY-qGf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="blueView" destination="5uF-Be-mf9" id="ufV-Ux-D8P"/>
+                        <outlet property="redView" destination="Wxa-er-AcE" id="x7B-VJ-bU1"/>
+                        <outlet property="yellowView" destination="pFx-gx-A4a" id="KRr-C4-wk8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="194" y="-83"/>
         </scene>
     </scenes>
 </document>
