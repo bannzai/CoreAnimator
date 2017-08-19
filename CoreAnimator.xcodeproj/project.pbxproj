@@ -11,6 +11,7 @@
 		BA906F121F47DA9C005EECD3 /* CoreAnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F111F47DA9C005EECD3 /* CoreAnimatorTests.swift */; };
 		BA906F141F47DA9C005EECD3 /* CoreAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = BA906F061F47DA9C005EECD3 /* CoreAnimator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA906F1E1F47DAA7005EECD3 /* CoreAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */; };
+		BA906F5C1F47E65A005EECD3 /* AnimationKeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		BA906F111F47DA9C005EECD3 /* CoreAnimatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimatorTests.swift; sourceTree = "<group>"; };
 		BA906F131F47DA9C005EECD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimator.swift; sourceTree = "<group>"; };
+		BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationKeyPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				BA906F061F47DA9C005EECD3 /* CoreAnimator.h */,
 				BA906F1D1F47DAA7005EECD3 /* CoreAnimator.swift */,
+				BA906F5B1F47E65A005EECD3 /* AnimationKeyPath.swift */,
 				BA906F071F47DA9C005EECD3 /* Info.plist */,
 			);
 			path = CoreAnimator;
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA906F1E1F47DAA7005EECD3 /* CoreAnimator.swift in Sources */,
+				BA906F5C1F47E65A005EECD3 /* AnimationKeyPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +410,7 @@
 				BA906F191F47DA9C005EECD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA906F1A1F47DA9C005EECD3 /* Build configuration list for PBXNativeTarget "CoreAnimatorTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +419,7 @@
 				BA906F1C1F47DA9C005EECD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
