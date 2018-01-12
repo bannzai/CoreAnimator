@@ -1,4 +1,4 @@
-//
+//
 //  SequenceAnimation.swift
 //  CoreAnimator
 //
