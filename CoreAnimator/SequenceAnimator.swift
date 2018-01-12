@@ -64,7 +64,7 @@ public class SequenceAnimator {
         autoreverse: Bool = false,
         isRemovedOnCompletion: Bool = false,
         fillMode: CoreAnimationFillMode = .forwards,
-        completion: ((Void) -> Void)? = nil
+        completion: (() -> Void)? = nil
         ) -> SequenceAnimator {
         
         return add(duration: duration,
@@ -90,7 +90,7 @@ public class SequenceAnimator {
         autoreverse: Bool = false,
         isRemovedOnCompletion: Bool = false,
         fillMode: CoreAnimationFillMode = .forwards,
-        completion: ((Void) -> Void)? = nil
+        completion: (() -> Void)? = nil
         ) -> SequenceAnimator {
         
         animations.append(
