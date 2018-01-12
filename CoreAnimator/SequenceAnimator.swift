@@ -9,7 +9,7 @@
 import UIKit
 
 public class SequenceAnimator {
-    var animations: [SequenceAnimation] = []
+    var animations: [Animation] = []
     var allCompletion: (() -> Void)?
     
     public init() { }
@@ -22,7 +22,7 @@ public class SequenceAnimator {
         ) -> SequenceAnimator {
         
         animations.append(
-            ViewSequenceAnimation(
+            ViewAnimation(
                 duration: duration,
                 view: view,
                 options: options,
@@ -42,7 +42,7 @@ public class SequenceAnimator {
         ) -> SequenceAnimator {
         
         animations.append(
-            ViewSequenceAnimation(
+            ViewAnimation(
                 duration: duration,
                 view: view,
                 options: options,
@@ -93,7 +93,7 @@ public class SequenceAnimator {
         ) -> SequenceAnimator {
         
         animations.append(
-            LayerSequenceAnimation(
+            LayerAnimation(
                 duration: duration,
                 layer: layer,
                 options: options,

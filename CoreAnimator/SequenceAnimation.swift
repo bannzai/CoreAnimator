@@ -1,5 +1,5 @@
 //
-//  SequenceAnimation.swift
+//  Animation.swift
 //  CoreAnimator
 //
 //  Created by Yudai.Hirose on 2017/08/19.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SequenceAnimation {
+protocol Animation {
     var duration: TimeInterval { get }
     
     func animate(with delay: TimeInterval)
 }
 
-struct ViewSequenceAnimation: SequenceAnimation {
+struct ViewAnimation: Animation {
     typealias View = UIView
     
     let duration: TimeInterval
@@ -36,7 +36,7 @@ struct ViewSequenceAnimation: SequenceAnimation {
     }
 }
 
-struct LayerSequenceAnimation: SequenceAnimation {
+struct LayerAnimation: Animation {
     typealias View = CALayer
     
     let duration: TimeInterval
