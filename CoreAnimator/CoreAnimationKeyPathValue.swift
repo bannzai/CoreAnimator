@@ -9,13 +9,6 @@
 import Foundation
 
 
-public protocol ValueType {
-    associatedtype Input
-    associatedtype Output
-    func translate(input: Input) -> Output
-    static var key: String { get }
-}
-
 public protocol KeyPath {
     var key: String { get }
     var value: Any { get }

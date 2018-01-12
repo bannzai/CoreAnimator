@@ -54,25 +54,25 @@ public class SequenceAnimator {
         return self
     }
     
-    public func add<V: ValueType>(
+    public func add(
         duration: TimeInterval,
         layer: CALayer,
         options: CoreAnimationTimingType,
-        keyPath: V.Type,
-        fromValue: V.Input,
-        toValue: V.Input,
+        fromKeyPathValue: KeyPath,
+        toKeyPathValue: KeyPath,
         autoreverse: Bool = false,
         isRemovedOnCompletion: Bool = false,
         fillMode: CoreAnimationFillMode = .forwards,
         completion: (() -> Void)? = nil
         ) -> SequenceAnimator {
         
+        assert(fromKeyPathValue.key == toKeyPathValue.key)
         return add(duration: duration,
             layer: layer,
             options: options,
-            keyPath: keyPath.key,
-            fromValue: fromValue,
-            toValue: toValue,
+            keyPath: fromKeyPathValue.key,
+            fromValue: fromKeyPathValue.value,
+            toValue: toKeyPathValue.value,
             autoreverse: autoreverse,
             isRemovedOnCompletion: isRemovedOnCompletion,
             fillMode: fillMode,
