@@ -12,9 +12,7 @@ public class SequenceAnimator {
     var animations: [SequenceAnimation] = []
     var allCompletion: (() -> Void)?
     
-    public init() {
-        
-    }
+    public init() { }
     
     public func add(
         duration: TimeInterval,
@@ -34,6 +32,7 @@ public class SequenceAnimator {
         )
         return self
     }
+    
     public func add(
         duration: TimeInterval,
         view: UIView,
