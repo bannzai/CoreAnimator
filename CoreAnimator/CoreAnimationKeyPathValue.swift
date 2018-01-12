@@ -53,7 +53,7 @@ extension KeyPathType: KeyPath {
         case .cornerRadius(let cornerRadius):
             return NSNumber(value: Float(cornerRadius))
         case .transform(let value):
-            return NSValue(cgAffineTransform: input)
+            return NSValue(cgAffineTransform: value)
         case .frame(let rect):
             return NSValue(cgRect: rect)
         }
